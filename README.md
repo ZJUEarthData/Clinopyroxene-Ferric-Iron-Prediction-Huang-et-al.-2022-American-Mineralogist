@@ -15,9 +15,9 @@ See Manual_for_Mac or Manual_for_Windows for application details.
 
 ## Contributors
 + Weihua Huang  
-Email:
+Email : 
 + Can He  
-Email:sanyhew1097618435@163.com
+Email : sanyhew1097618435@163.com
 
 
 
