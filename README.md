@@ -10,13 +10,13 @@ This project provides three functions for pyroxene's instances:
 See Manual_for_Mac or Manual_for_Windows for application details.
 
 ## Others
-model_training : codes to train the merchine learning model with designated hyperparameter and data set used for train
-processing_directory : the package and other dependencies
++ model_training : codes to train the merchine learning model with designated hyperparameter   and data sets used for train
++ processing_directory : the package and other dependencies
 
 ## Contributors
-+ Weihua Huang 
++ Weihua Huang  
 Email:
-+ Can He
++ Can He  
 Email:sanyhew1097618435@163.com
 
 
