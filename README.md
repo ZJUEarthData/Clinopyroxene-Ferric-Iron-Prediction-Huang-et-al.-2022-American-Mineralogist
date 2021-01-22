@@ -14,10 +14,10 @@ See Manual_for_Mac or Manual_for_Windows for application details.
 + processing_directory : the package and other dependencies
 
 ## Contributors
-+ Weihua Huang  
-Email : 
 + Can He  
 Email : sanyhew1097618435@163.com
++ Weihua Huang  
+Email : 21938003@zju.edu.cn
 
 
 
