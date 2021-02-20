@@ -133,9 +133,9 @@ def normalization_factor_calculation(rmw, oxy_num, data_input, model=1):
     normalization_factor = []
     data_num = data_input.shape[0]
     if model == 1 or model == 2:
-        anion_coef = 12
-    elif model == 3:
         anion_coef = 6
+    elif model == 3:
+        anion_coef = 4
     for i in range(data_num):
         single_data = data_input.iloc[i, :]
         nf = float(anion_coef) / sum(np.array(oxy_num) * np.array(single_data) / np.array(rmw))
@@ -208,22 +208,22 @@ def result2sheet(df, df_name=None, pattern=1):
         df.to_csv(os.path.join(RESULT_PATH, "{}.csv".format(df_name)))
         print("Successfully store the results of {} in '{}.csv' in the directory 'results'\n".format(df_name, df_name))
 
-def poly_preprocess(data, option):
+def poly_preprocess(data, pattern):
     """increase data dimensions for polynomial regression
 
     :param data: data set
-    :param option:  pattern to indicate which .pkl to use
+    :param pattern:  pattern to indicate which .pkl to use
     :return: augmented data
     """
     # different patterns have different pkl
-    if option == 1:
+    if pattern == 1:
         model = PCA_MODEL[0]
-    elif option == 2:
+    elif pattern == 2:
         model = PCA_MODEL[1]
     pca_path = os.path.join(WORKING_PATH, MODEL_PATH, model)
     pca_model = joblib.load(pca_path)
     # do dimension reduction first
-    data_reduced = pca_model.fit_transform(data)
+    data_reduced = pca_model.transform(data)
     # do feature augmentation afterwards
     poly_features = PolynomialFeatures(degree=POLY_DEGREE, include_bias=False)
     data_augmented = poly_features.fit_transform(data_reduced)
@@ -254,10 +254,10 @@ def range_limit(y):
             list_y[i] = 0
     return np.array(list_y)
 
-def model_relaunch(option, model_name, model, data):
+def model_relaunch(pattern, model_name, model, data):
     """relaunch trained model with specific pattern
 
-    :param option: one of the three patterns
+    :param pattern: one of the three patterns
     :param model_name: the name of ML models
     :param model: machine learning model
     :param data: data set used for predicting
@@ -269,14 +269,14 @@ def model_relaunch(option, model_name, model, data):
         joblib_model = joblib.load(os.path.join(WORKING_PATH, MODEL_PATH, model[i]))
         # polynomial reg and tree model are special because of data dimensions
         if model_name[i] == 'Polynomial Regression':
-            data_augmented = poly_preprocess(data_temp, option)
+            data_augmented = poly_preprocess(data_temp, pattern)
             y = joblib_model.predict(data_augmented)
             # limit the predicted value in the range of 0 to 1
             y_limited = range_limit(y)
         elif model_name[i] == 'Extra Tree' or model_name[i] == 'Random Forest':
-            if option == 1 or option == 2:
+            if pattern == 1 or pattern == 2:
                 data_augmented = tree_preprocess(data_temp)
-            elif option == 3:
+            elif pattern == 3:
                 # data dimension don't change in model 3
                 data_augmented = data_temp
             y = joblib_model.predict(data_augmented)
