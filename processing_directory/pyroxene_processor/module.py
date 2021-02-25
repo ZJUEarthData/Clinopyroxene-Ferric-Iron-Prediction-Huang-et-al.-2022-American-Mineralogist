@@ -282,6 +282,7 @@ def model_relaunch(pattern, model_name, model, data):
             y = joblib_model.predict(data_augmented)
             y_limited = range_limit(y)
         else:
+            print(data_temp)
             y = joblib_model.predict(data_temp)
             y_limited = range_limit(y)
         print("{} is predicting ......".format(model_name[i]))

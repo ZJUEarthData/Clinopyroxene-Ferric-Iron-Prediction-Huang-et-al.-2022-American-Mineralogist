@@ -33,8 +33,8 @@ MODEL_NAME_ONE = ['Polynomial Regression', 'Artificial Neutral Network', 'Extra 
 MODEL_ONE = ['poly.pkl', 'mlp.pkl', 'et.pkl', 'rf.pkl']
 MODEL_NAME_TWO = ['Linear Regression', 'Polynomial Regression', 'Extra Tree', 'Random Forest']
 MODEL_TWO = ['Linear_new.pkl', 'poly_new.pkl', 'et_new.pkl', 'rf_new.pkl']
-MODEL_NAME_THREE = ['Linear Regression', 'Extra Tree']
-MODEL_THREE = ['Linear_spl.pkl', 'et_spl.pkl']
+MODEL_NAME_THREE = ['Linear Regression', 'Extra Tree', 'Random Forest']
+MODEL_THREE = ['Linear_spl.pkl', 'et_spl.pkl', 'rf_spl.pkl']
 
 # trained pca model
 PCA_MODEL = ['pca.pkl', 'pca_new.pkl']
