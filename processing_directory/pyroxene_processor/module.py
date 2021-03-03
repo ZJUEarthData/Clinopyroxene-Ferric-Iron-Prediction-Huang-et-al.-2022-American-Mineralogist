@@ -273,7 +273,7 @@ def model_relaunch(pattern, model_name, model, data):
             y = joblib_model.predict(data_augmented)
             # limit the predicted value in the range of 0 to 1
             y_limited = range_limit(y)
-        elif model_name[i] == 'Extra Tree' or model_name[i] == 'Random Forest':
+        elif model_name[i] == 'Extra Tree' or model_name[i] == 'Random Forest' or model_name[i] == 'Decision Tree':
             if pattern == 1 or pattern == 2:
                 data_augmented = tree_preprocess(data_temp)
             elif pattern == 3:

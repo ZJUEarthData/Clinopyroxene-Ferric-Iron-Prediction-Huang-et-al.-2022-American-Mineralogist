@@ -28,11 +28,14 @@ RESULT_PATH = os.path.join(WORKING_PATH, "results")
 # the directory where data set to be processed stores
 DATASET_PATH  = os.path.join(WORKING_PATH, "dataset")
 
-# trained model
-MODEL_NAME_ONE = ['Polynomial Regression', 'Artificial Neutral Network', 'Extra Tree', 'Random Forest']
-MODEL_ONE = ['poly.pkl', 'mlp.pkl', 'et.pkl', 'rf.pkl']
-MODEL_NAME_TWO = ['Linear Regression', 'Polynomial Regression', 'Extra Tree', 'Random Forest']
-MODEL_TWO = ['Linear_new.pkl', 'poly_new.pkl', 'et_new.pkl', 'rf_new.pkl']
+# trained model and their corresponding name in the same order
+MODEL_NAME_ONE = ['Polynomial Regression', 'Artificial Neutral Network', 'Artificial Neutral Network Ensemble',
+                  'Decision Tree', 'Extra Tree', 'Random Forest']
+MODEL_ONE = ['poly.pkl', 'mlp.pkl', 'mlp_bag.pkl', 'dt.pkl', 'et.pkl', 'rf.pkl']
+MODEL_NAME_TWO = ['Linear Regression', 'Polynomial Regression', 'Artificial Neutral Network',
+                  'Artificial Neutral Network Ensemble', 'Decision Tree', 'Extra Tree', 'Random Forest']
+MODEL_TWO = ['Linear_new.pkl', 'poly_new.pkl', 'mlp_new.pkl', 'mlp_bag_new.pkl',
+             'dt_new.pkl', 'et_new.pkl', 'rf_new.pkl']
 MODEL_NAME_THREE = ['Linear Regression', 'Extra Tree', 'Random Forest']
 MODEL_THREE = ['Linear_spl.pkl', 'et_spl.pkl', 'rf_spl.pkl']
 
