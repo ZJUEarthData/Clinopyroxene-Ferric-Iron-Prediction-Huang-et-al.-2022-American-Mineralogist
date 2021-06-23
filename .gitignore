@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# jupyter notebook
+.ipynb_checkpoints
+
+# pycharm
+.idea
+
+# bytecode
+__pycache__
