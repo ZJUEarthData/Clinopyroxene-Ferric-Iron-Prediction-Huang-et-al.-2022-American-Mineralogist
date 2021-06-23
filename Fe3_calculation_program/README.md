@@ -28,7 +28,13 @@ The following introduction will be included in 【Manual_for_Mac】or【Manual_f
 + **excecution.py**: it’s a python scripts used to run the commands for processing the given data once you execute it in the command line. It is editable according to the routine we mentioned in Processing part of 【Manual_for_Mac】or 【Manual_for_Windows】.
 
 # Data Process Steps
-This package *pyroxene_processor* will provide you with a function to use. Please import it in this way in command line:
+This package *pyroxene_processor* will provide you with a function to use. The presence of ```>>>``` before a command indicates that the command is a python script, which means that it should be excuted by a python interpreter. More detail, please check the corresponding manual.
+Please import it in this way in command line:
+Activate Python interpreter in Terminal(Mac) or Dos(Windows).
+```
+python
+```
+Import the package *pyroxene_processor*.
 ```
 >>> from pyroxene_processor.processor import process
 ```
