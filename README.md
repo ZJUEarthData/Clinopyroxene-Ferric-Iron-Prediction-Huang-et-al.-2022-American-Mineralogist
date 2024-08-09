@@ -18,9 +18,9 @@ See **Manual_for_Mac** or **Manual_for_Windows** for application details.The man
 
 ## CONTRIBUTORS
 + Can He (Sany)  
-Email : hecan@mail2.sysu.edu.cn
+Email : sanyhew1097618435@163.com
 + Weihua Huang  
 Email : 21938003@zju.edu.cn
 
 ## REFERENCE
-+ Huang W-H, Lyv Y, Du M-H, He C, Gao S-D, Xu R-J, Xia Q-K, and ZhangZhou J\* (2022) [Estimation of ferriciron contents in clinopyroxene by machine learning models](https://www.researchgate.net/publication/354803339_Title_Estimation_of_ferric_iron_contents_in_clinopyroxene_by_machine_learning_models). American Mineralogist (in press,doi:https://doi.org/11.2139/am-2022-8189)
++ Huang Weihua, Lyv Yang, Du Minghao, He Can, Gao Shangde, Xu Renjun, Xia Qunke, ZhangZhou J* Estimation of ferric iron contents in clinopyroxene by machine learning models. American Mineralogist 107, 1886-1900.
